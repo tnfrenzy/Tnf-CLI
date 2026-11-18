@@ -1,0 +1,13 @@
+{
+  "name": "TNF Claude Controller",
+  "short_name": "TNF Claude Controller",
+  "description": "Điều phối Claude Code bằng một câu tiếng Việt",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#111827",
+  "theme_color": "#111827",
+  "icons": [
+    { "src": "/logo.png", "sizes": "128x128", "type": "image/png", "purpose": "any" }
+  ]
+}
