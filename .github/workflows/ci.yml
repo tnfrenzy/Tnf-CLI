@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "feat/**"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+      - name: Typecheck (server + UI)
+        run: npm run typecheck
+      - name: Build UI
+        run: npm run build:ui
+      - name: Privacy scan
+        run: npm run privacy:scan
+      - name: Fast & core unit tests
+        run: npm run test:fast
