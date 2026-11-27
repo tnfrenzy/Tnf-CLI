@@ -1,0 +1,14 @@
+{
+  "title": "Video mẫu phong cách BKE",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration": 12,
+  "status": "template",
+  "scenes": [
+    { "id": "intro", "start": 0, "end": 3 },
+    { "id": "icons", "start": 3, "end": 6 },
+    { "id": "diagram", "start": 6, "end": 9 },
+    { "id": "outro", "start": 9, "end": 12 }
+  ]
+}

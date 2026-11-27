@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>Video mẫu</title>
+<style>html,body{margin:0;background:#000}</style>
+</head>
+<body>
+<div id="stage"></div>
+<script src="lib/tnf-motion.js"></script>
+<script src="brand.js"></script>
+<script src="scenes/01-intro.js"></script>
+<script src="scenes/02-icons.js"></script>
+<script src="scenes/03-diagram.js"></script>
+<script src="scenes/04-outro.js"></script>
+<script>
+  // Values below must match project.json.
+  var brand = TNF.brand(window.TNF_BRAND);
+  TNF.start({
+    duration: 12, fps: 30, width: 1080, height: 1920, brand: window.TNF_BRAND,
+    bg: [TNF.starfield({ seed: 7, count: 140, bg: brand.colors.bg })],
+    scenes: TNF.scenes,
+    fg: [
+      TNF.frame({ color: brand.colors.accent }),
+      TNF.topBar({ brand: window.TNF_BRAND, steps: 8 }),
+      TNF.bottomBar({ brand: window.TNF_BRAND })
+    ]
+  });
+</script>
+</body>
+</html>
